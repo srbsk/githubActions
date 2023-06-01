@@ -39,7 +39,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
       with:
-        context: ./app/Dockerfile
+        context: ./app
         push: true
         tags: gcr.io/${{ secrets.GCP_PROJECT_ID }}/hello-world:latest
 
