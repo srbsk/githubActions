@@ -15,8 +15,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Decode Google Cloud credentials
-      run: echo "${{ secrets.GCP_SA_KEY }}" | base64 -d > ./gcp-sa-key.json
+    # - name: Decode Google Cloud credentials
+    #   run: echo "${{ secrets.GCP_SA_KEY }}" | base64 -d > ./gcp-sa-key.json
 
     - name: Create a service account key file
       run: |
@@ -30,9 +30,6 @@ jobs:
         version: latest
         export_default_credentials: false
 
-    # - name: Set JSON key as output
-    #   id: set_sa_key
-    #   run: echo "::set-output name=sa_key::$(cat ./gcp-sa-key.json)"
     - name: Set GCR login details to environment variable
       run: |
         echo "GCR_JSON_SA_KEY=$(cat gcp-sa-key.json)" >> $GITHUB_ENV     
