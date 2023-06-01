@@ -34,7 +34,7 @@ jobs:
       with:
         registry: gcr.io
         username: _json_key
-        password: ${{ secrets.GCP_SA_KEY }}
+        password: ./gcp-sa-key.json
 
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
