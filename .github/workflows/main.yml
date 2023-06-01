@@ -18,28 +18,28 @@ jobs:
     # - name: Decode Google Cloud credentials
     #   run: echo "${{ secrets.GCP_SA_KEY }}" | base64 -d > ./gcp-sa-key.json
 
-    # - name: Create a service account key file
-    #   run: |
-    #     echo '{"type":"service_account","project_id":"unique-magpie-388510","private_key_id":"b44e9f3a9d7487661aaa460a35c65f450793756b","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC6mf2keE8iEs2n\npFm1HKV/JiRi9K4E1uqAXp/Jg5dubSulsXpxXL6KUV2HDcaCppIz5tE2GWo1OHKS\n8J+2Y/zPn+oTTGYFvJxnB937YAKYK7Vmxle3M8sT5jQTF0FTZDvpgLonPuu49QUk\nm97pnLwVFBqkPBJUGDY8nsXGPWTlCZFsEP8m5FCOn/mlQxLK/4UbBJovfpvRDq0r\n26jmBWvx5IO0KGliLyVCE3jJEWaFOMvgOvJz7icJ6Cef3Bj3WYGhX+C22IQz3RUl\nuDIi2AUCW5+oedi+GS6ckUn5RQi261gKbAUVH5DnXZHxx20b7yHbdV8fzUyyDRoz\nverA5kAnAgMBAAECggEABMnEx2lK5oiYUa/sRAh10AXDiJfXYJ+/KVzEOYswjJCC\nk+AyUHcHxfbWhouk8gn3gHDGIjQ+vxoxXnHhjJro4Xmsq6LEj2sf5vOTD6COuybh\nTb991WFKhGUzeuCYODKUkvukSzODIEjb6+zlUxXxgZJK02IIj7Mwrmzd4vtaUReF\nfIJllJHTut8sl/SrvQIyyTzAZtmif3U9HAcmUaWDf6QZnRXB18w2A/2fIMZWkgSm\nnSEWUTFSybyVLV+vX/CGCR6Gv/owTHGSjyVJrfiNPa0oXpA6Pi8p3KkxfTwcW0pb\n7dSYo3c7FLH1F7iJHCg99iwNCJYalq2LkqojrKVTkQKBgQDx367RvMAhROjyGIh/\nNMZZO2TK5aeQAnpqnEnHY222aw8GjyQI2lmO9hXTaTuAXyvVwuUxpwpUNPGBQzPb\nUpFzKKGN1g2/IsKAFzsWDik8vt2qKeWHaXASjO1mPwll4LtYrWitiEyylLyIJlhu\npNVx39/pCUFU01P48uyoOsKAyQKBgQDFf+setEQbfj+2PTl7OmM31VfPJWaYwfvx\nlaubDwZbr/9DN+NNq82ZG5YPkg0bHwOuPqsJESTHJtuD6fKROWyR84Hoi4B9hiM1\nS89XKEkCe3OzrA5Vh8x4fcumQ00Acp8kh4G5Eb2GF2fiApjvCQkGid29PBNtHsqm\nHjQbYgKhbwKBgGZFfYcDt32ZxKGxS+31o7TRT1IXfx1+XsK7aNrdKOPMKuNMHSF9\nKgcv+JSW12j1VPSi3wR6q/xlEoTkpIWlSQkXchAmJVPfX7yHlh1CSZ982P99jacP\nJytA2ZS1LMUeHDlnwW42xq9wArPS+ut12Sa4UdYYar5ySPxnwzdy+RE5AoGBALo9\ns5GjumoWtqv6tj7fQ3r+QyzC/ynkG9qoIkg5dex2XgecJ0wyS9Iq8mpCdvtxVr40\nuIL3WLA4k16k+ao69Yf4kjOhgYxdNsxmbeKpyZd+pQ/0mxvK0GV7ctSZuH5ImIwR\nAKJt+UP+xGabvm4DHjC9R43Qnh0ToVPfPZHo7cQfAoGBAM5oXQtCjmDUHjrEsyPG\nLVjiQ2crbnrj02D/B35hIc5tklMnVfrwP+aTKg3geuFOHmUTl8LIJUQ56KDfTxSv\nnt53nONWY7lUCRAgjaiVTHu8IxtsH8i7yYf6J/qM4N8tEk/RQpKvF+xGKHYC77a+\nap2NJ9dv8qxSORguWxqJrWX9s\n-----END PRIVATE KEY-----\n","client_email":"githubactionsproject@unique-magpie-388510.iam.gserviceaccount.com","client_id":"110332038333719717193","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/githubactionsproject%40unique-magpie-388510.iam.gserviceaccount.com","universe_domain":"googleapis.com"}' > gcp-sa-key.json
+    - name: Create a service account key file
+      run: |
+        echo -e '{"type":"service_account","project_id":"unique-magpie-388510","private_key_id":"b44e9f3a9d7487661aaa460a35c65f450793756b","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC6mf2keE8iEs2n\npFm1HKV/JiRi9K4E1uqAXp/Jg5dubSulsXpxXL6KUV2HDcaCppIz5tE2GWo1OHKS\n8J+2Y/zPn+oTTGYFvJxnB937YAKYK7Vmxle3M8sT5jQTF0FTZDvpgLonPuu49QUk\nm97pnLwVFBqkPBJUGDY8nsXGPWTlCZFsEP8m5FCOn/mlQxLK/4UbBJovfpvRDq0r\n26jmBWvx5IO0KGliLyVCE3jJEWaFOMvgOvJz7icJ6Cef3Bj3WYGhX+C22IQz3RUl\nuDIi2AUCW5+oedi+GS6ckUn5RQi261gKbAUVH5DnXZHxx20b7yHbdV8fzUyyDRoz\nverA5kAnAgMBAAECggEABMnEx2lK5oiYUa/sRAh10AXDiJfXYJ+/KVzEOYswjJCC\nk+AyUHcHxfbWhouk8gn3gHDGIjQ+vxoxXnHhjJro4Xmsq6LEj2sf5vOTD6COuybh\nTb991WFKhGUzeuCYODKUkvukSzODIEjb6+zlUxXxgZJK02IIj7Mwrmzd4vtaUReF\nfIJllJHTut8sl/SrvQIyyTzAZtmif3U9HAcmUaWDf6QZnRXB18w2A/2fIMZWkgSm\nnSEWUTFSybyVLV+vX/CGCR6Gv/owTHGSjyVJrfiNPa0oXpA6Pi8p3KkxfTwcW0pb\n7dSYo3c7FLH1F7iJHCg99iwNCJYalq2LkqojrKVTkQKBgQDx367RvMAhROjyGIh/\nNMZZO2TK5aeQAnpqnEnHY222aw8GjyQI2lmO9hXTaTuAXyvVwuUxpwpUNPGBQzPb\nUpFzKKGN1g2/IsKAFzsWDik8vt2qKeWHaXASjO1mPwll4LtYrWitiEyylLyIJlhu\npNVx39/pCUFU01P48uyoOsKAyQKBgQDFf+setEQbfj+2PTl7OmM31VfPJWaYwfvx\nlaubDwZbr/9DN+NNq82ZG5YPkg0bHwOuPqsJESTHJtuD6fKROWyR84Hoi4B9hiM1\nS89XKEkCe3OzrA5Vh8x4fcumQ00Acp8kh4G5Eb2GF2fiApjvCQkGid29PBNtHsqm\nHjQbYgKhbwKBgGZFfYcDt32ZxKGxS+31o7TRT1IXfx1+XsK7aNrdKOPMKuNMHSF9\nKgcv+JSW12j1VPSi3wR6q/xlEoTkpIWlSQkXchAmJVPfX7yHlh1CSZ982P99jacP\nJytA2ZS1LMUeHDlnwW42xq9wArPS+ut12Sa4UdYYar5ySPxnwzdy+RE5AoGBALo9\ns5GjumoWtqv6tj7fQ3r+QyzC/ynkG9qoIkg5dex2XgecJ0wyS9Iq8mpCdvtxVr40\nuIL3WLA4k16k+ao69Yf4kjOhgYxdNsxmbeKpyZd+pQ/0mxvK0GV7ctSZuH5ImIwR\nAKJt+UP+xGabvm4DHjC9R43Qnh0ToVPfPZHo7cQfAoGBAM5oXQtCjmDUHjrEsyPG\nLVjiQ2crbnrj02D/B35hIc5tklMnVfrwP+aTKg3geuFOHmUTl8LIJUQ56KDfTxSv\nnt53nONWY7lUCRAgjaiVTHu8IxtsH8i7yYf6J/qM4N8tEk/RQpKvF+xGKHYC77a+\nap2NJ9dv8qxSORguWxqJrWX9s\n-----END PRIVATE KEY-----\n","client_email":"githubactionsproject@unique-magpie-388510.iam.gserviceaccount.com","client_id":"110332038333719717193","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/githubactionsproject%40unique-magpie-388510.iam.gserviceaccount.com","universe_domain":"googleapis.com"}' > gcp-sa-key.json
 
     - name: Set up Cloud SDK
       uses: google-github-actions/setup-gcloud@v0.2.1
       with:
-        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        service_account_key: ./gcp-sa-key.json
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         version: latest
         export_default_credentials: false
 
-    # - name: Set GCR login details to environment variable
-    #   run: |
-    #     echo "GCR_JSON_SA_KEY=$(cat gcp-sa-key.json)" >> $GITHUB_ENV     
+    - name: Set GCR login details to environment variable
+      run: |
+        echo "GCR_JSON_SA_KEY=$(cat gcp-sa-key.json)" >> $GITHUB_ENV     
 
     - name: Login to Google Container Registry
       uses: docker/login-action@v1 
       with:
         registry: gcr.io
         username: _json_key
-        password: ${{ secrets.GCP_SA_KEY }}
+        password: ${{ secrets.GCR_JSON_SA_KEY }}
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
