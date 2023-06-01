@@ -1,6 +1,6 @@
 # main.tf
 provider "google" {
-  credentials = file(env("GOOGLE_CREDENTIALS"))
+  credentials = file("./unique-magpie-388510-b44e9f3a9d74.json")
   project = "unique-magpie-388510"
   region  = "us-central1"
   zone    = "us-central1-c"
