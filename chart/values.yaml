@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  repository: gcr.io/unique-magpie-388510/hello-world
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: LoadBalancer
+  port: 8080
